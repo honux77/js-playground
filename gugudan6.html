@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <h1>반복문을 사용한 구구단 연습</h1>
+    <script>
+        var strN = prompt("몇 단을 출력할까요?");
+        var n = Number(strN);
+        document.write("<h2>구구단 " + n + "단</h2>");
+        for (var i = 1; i <= 9; i++) {
+            document.write(n + " * "  + i  + " = " + n * i +"<br>");
+        }
+        /*
+        //1 i라는 변수를 초기화 
+        var i = 1;
+        //2 조건식이 참인지 검사 
+        while (i <= 9) {
+            //3. 원하는 코드 실행 
+            document.write(n + " * "  + i  + " = " + n * i +"<br>");
+            //4. 값을 증감             
+            i++;
+        }
+        */
+    </script>
+    
+</body>
+</html>
