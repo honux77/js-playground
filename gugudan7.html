@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gugudan 7</title>
+</head>
+<body>
+    <h1> if 문 사용해 보기 </h1>
+    <script>
+        //while, break 
+        var strN = prompt("출력할 단을 입력해 주세요.");
+        var n = Number(strN);
+        if (n < 2 || n > 9) {
+            console.log("2이상 9이하의 숫자를 입력해 주세요.");
+        } else {
+            for (var i = 1; i <= 9; i++) {
+                var ret = n * i;
+                console.log(n + " * " + i + " = " + ret);                
+            }
+        }
+    </script>
+    
+</body>
+</html>
