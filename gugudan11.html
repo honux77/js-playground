@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>gugudan11</title>
+</head>
+<body>
+    <h1>구구단 완결편</h1>
+    <script>
+        gugudan = {};
+        gugudan.result = [];
+        gugudan.current = -1;
+        gugudan.calculate = function(n) {
+            this.current = n;
+            for (var i = 0; i < 9; i++) {
+                this.result[i] = n * (i + 1); 
+            }
+        }
+
+        gugudan.print = function() {
+            document.write("<h2>" + this.current + "단</h2>");
+            for (var i = 0; i < 9; i++) {
+                var x = this.current;
+                var t = i + 1;
+                var y = this.result[i];
+                document.write(x + " * " + t + " = " + y + "<br>");
+            }
+        }
+
+        function main() {
+            for (var i = 2; i <= 9; i++) {
+                gugudan.calculate(i);
+                gugudan.print();
+            }
+        }
+        main();
+    </script>    
+</body>
+</html>
