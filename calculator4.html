@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>문자열 계산기 구현하기</h1>
+    <div id="output">알 이즈 웰</div>
+    <script>
+        function main() {
+            var n1 = Number(prompt("첫번째 숫자를 입력해 주세요."));    
+            var out = document.getElementById('output');
+
+            var op, n2;
+            var result = n1;
+            var n = 2;
+
+            while(true) {
+                op = prompt("연사자를 입력해 주세요.");
+
+                if (op === 'q') {
+                    break;
+                }
+                n2 = Number(prompt(n + "번째 숫자를 입력해 주세요."));                
+
+                if (op === '+') {
+                    result += n2;
+                } else if (op === '-') {
+                    result -= n2;
+                } else if (op === '*') {
+                    result *= n2;
+                } else if (op === '/') {
+                    result /= n2;
+                } else {
+                    result = "중간오류";
+                    break;
+                }
+                n++;
+            }           
+
+            out.innerHTML = "최총 결과값은" + result + "입니다";           
+        }
+        main();
+    </script>
+</body>
+</html>
