@@ -9,28 +9,28 @@
 <body>
     <h1>문자열 계산기 구현하기</h1>
     <div>
-        첫번째 수: <input type="text" id="n1">
-        두번째 수: <input type="text" id="n2">
+        첫번째 수: <input type="text" id="n1"> <br>
+        두번째 수: <input type="text" id="n2"> <br>
         <button onclick="calc()">실행</button>
     </div>
     <div id="output">알 이즈 웰</div>
     <script>
-        function main() {
-            console.log("Calculator1");
-            var out = document.getElementById("output");
-            var str = "";
-            str += "<h2>계산기 구현하기</h2>";
-            
-            var n1 = Number(prompt("첫번째 값을 입력해 주세요."));
-            var n2 = Number(prompt("두번째 값을 입력해 주세요."));            
-            str+= "더하기: " + (n1 + n2) +"<br>";
-            str+= "빼기: " + (n1 - n2) +"<br>";
-            str+= "곱하기: " + (n1 * n2) +"<br>";
-            str+= "나누기: " + (n1 / n2) +"<br>";  
+        function calc() {
+            var str1 = document.getElementById('n1').value;
+            var str2 = document.getElementById('n2').value;            
+            var n1 = Number(str1);
+            var n2 = Number(str2);
 
-            out.innerHTML = str;             
+            var out = document.getElementById('output');
+            var str = "";
+            str += "더하기: " + (n1 + n2) + "<br>";
+            str += "빼기: " + (n1 - n2) + "<br>";
+            str += "곱하기: " + (n1 * n2) + "<br>";
+            str += "나누기: " + (n1 / n2) + "<br>";
+            
+            out.innerHTML = str;           
         }
-        main();
+
     </script>
 </body>
 </html>
