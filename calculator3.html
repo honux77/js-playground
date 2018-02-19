@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>문자열 계산기 구현하기</h1>
+    <div>
+        첫번째 수: <input type="text" id="n1"> <br>
+        연산자: <input type="text" id="op"> <br>
+        두번째 수: <input type="text" id="n2"> <br>
+        <button onclick="calc()">실행</button>
+    </div>
+    <div id="output">알 이즈 웰</div>
+    <script>
+        function calc() {
+            var str1 = document.getElementById('n1').value;
+            var str2 = document.getElementById('n2').value;   
+            var op = document.getElementById('op').value;               
+            var n1 = Number(str1);
+            var n2 = Number(str2);
+
+            var out = document.getElementById('output');
+            var str = "";
+            if (op === "+") {                
+                str += "더하기: " + (n1 + n2) + "<br>";
+            } else if (op === "-") {
+                str += "빼기: " + (n1 - n2) + "<br>";
+            } else if (op === "*") {
+                str += "곱하기: " + (n1 * n2) + "<br>";
+            } else if (op === "/") {
+                str += "나누기: " + (n1 / n2) + "<br>";
+            } else {
+                str += "연산자에는 사칙연산자만 입력해 주세요.";
+            }
+
+            out.innerHTML = str;           
+        }
+
+    </script>
+</body>
+</html>
