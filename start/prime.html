@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find Prime</title>
+</head>
+<body>
+    <h1>소수 판별 프로그램</h1>
+    <script>
+        var isPrime = true;
+        var n = Number(prompt("2이상의 정수를 입력해 주세요."));
+        for (var i = 2; i < n; i++) {
+            if (n % i === 0) {                
+                isPrime = false;
+                //break;    
+            }
+            console.log(isPrime, i);
+        }
+
+        if (isPrime) {
+            document.write(n + "은 소수입니다.");
+        } else {
+            document.write(n + "은 소수가 아닙니다.");
+        }
+
+    </script>
+</body>
+</html>
