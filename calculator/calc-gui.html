@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
-
     <style>
         #output {
             background-color: darkblue;
@@ -36,25 +35,25 @@
             <button id='7' onclick='clickNumbers(event)'>7</button>
             <button id='8' onclick='clickNumbers(event)'>8</button>
             <button id='9' onclick='clickNumbers(event)'>9</button>
-            <button id='div' onclick='clickOthers(event)'>/</button>
+            <button id='div' onclick='clickNumbers(event)'>/</button>
         </div>
         <div id="btn2">
             <button id='4' onclick='clickNumbers(event)'>4</button>
             <button id='5' onclick='clickNumbers(event)'>5</button>
             <button id='6' onclick='clickNumbers(event)'>6</button>
-            <button id='mul' onclick='clickOthers(event)'>*</button>
+            <button id='mul' onclick='clickNumbers(event)'>*</button>
         </div>
         <div id="btn3">
             <button id='1' onclick='clickNumbers(event)'>1</button>
             <button id='2' onclick='clickNumbers(event)'>2</button>
             <button id='3' onclick='clickNumbers(event)'>3</button>
-            <button id='sub' onclick='clickOthers(event)'>-</button>
+            <button id='sub' onclick='clickNumbers(event)'>-</button>
         </div>
         <div id="btn4">
-            <button id='del' onclick='clickOthers(event)'>BS</button>
+            <button id='del' onclick='clickNumbers(event)'>BS</button>
             <button id='0' onclick='clickNumbers(event)'>0</button>
-            <button id='eq' onclick='clickOthers(event)'>=</button>
-            <button id='plus' onclick='clickOthers(event)'>-</button>
+            <button id='eq' onclick='showResult(event)'>=</button>
+            <button id='plus' onclick='clickNumbers(event)'>+</button>
         </div>
     </div>
     </div>
