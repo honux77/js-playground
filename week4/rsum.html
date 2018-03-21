@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS PlayGround</title>
+</head>
+
+<body>
+    <h1>JS PlayGround</h1>
+    <script>
+        var rsum = function(a, b) {
+            if (a > b) {
+                return NaN;
+            } else if (a == b) {
+                return a;
+            }
+            return b + rsum(a, b - 1);
+        }
+
+        console.log(rsum(1,1) === 1);
+        console.log(rsum(0,0) === 0);
+        console.log(rsum(1,2) === 3);
+        console.log(rsum(2,10) === 54);
+
+    </script>
+</body>
+
+</html>
