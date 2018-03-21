@@ -1,28 +1,25 @@
-var input = {'array': []};
+var input = {
+    'array': []
+};
 
-input.getInput = function() {
+input.getInput = function () {
     return this.array.join("");
 };
 
 var output = {};
 output.text = document.getElementById('output');
 
-var clickNumbers = function(event) {
+var clickNumbers = function (event) {
     var str = event.target.innerHTML;
     console.log(str);
 
-    switch (str) {
-        case 'BS':
+    if (str === 'BS') {
         input.array.pop();
-        break;
-        case '+':
-        case '-':
-        case '*':
-        case '/':
-        input.array.push(' ' + str + ' '); 
-        break;
-        default:
-        input.array.push(str);        
+    } else if (str === '+' || str === '-' || str === '*' || str === '/') {
+        input.array.push(' ' + str + ' ');
+
+    } else {
+        input.array.push(str);
     }
 
     if (input.array.length === 0) {
@@ -32,14 +29,14 @@ var clickNumbers = function(event) {
     }
 }
 
-var showResult = function(event) {
+var showResult = function (event) {
     console.log("click others");
     console.log(event.target.innerHTML);
 
 }
 
 
-        
+
 // input.init = function(str) {
 //     this.list = str.split(" ");   
 // };
@@ -102,4 +99,4 @@ var showResult = function(event) {
 //         result = calculator.calculate(result, second, op);
 //     }            
 //     output.print(result);
-// }       
+// }
