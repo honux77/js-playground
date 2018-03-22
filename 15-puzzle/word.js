@@ -1,24 +1,32 @@
-var str = document.getElementById('word1').innerHTML;
+var word1 = document.getElementById('word1');
 var word2 = document.getElementById('word2');
 var check = document.getElementById('check');
 
-var game = {
-    'answer': str
-};
-game.word = str.split('');
+var words = 'apple,linux,javascript,tutorial,codesquad,baby,girlfriend,legend'.split(',');
+
+
+var game = {};
+game.choice = function() {
+    var idx = Math.floor(Math.random() * words.length);
+    return words[idx];
+}
+var answer = game.choice();
+word1.innerHTML = answer;
+
+game.word = answer.split('');
 game.btns = [];
 
 game.updateDisplay = function () {
-    if (game.answer === game.word.join('')) {
+    if (answer === game.word.join('')) {
         check.innerHTML = '일치합니다';
     } else {
         check.innerHTML = '일치하지 않습니다';
     }
 };
 
-for (var i = 0; i < str.length; i++) {
+for (var i = 0; i < answer.length; i++) {
     var btn = document.createElement('button');
-    btn.innerHTML = str[i];
+    btn.innerHTML = answer[i];
     word2.appendChild(btn);
     game.btns.push(btn);
 }
@@ -55,3 +63,18 @@ var lshift = function (event) {
     game.copyBtnText();
     game.updateDisplay();
 };
+
+
+//shuffle
+
+var toggle = Math.floor(Math.random() * 2) === 0;
+
+if (toggle) {
+    swap();
+}
+
+var n = Math.floor(Math.random() * answer.length);
+
+for (var i = 0; i < n; i++) {
+    rshift();
+}
