@@ -109,6 +109,7 @@ game.progress = function() {
         var sec = (Date.now() - game.startTime) /1000;
         alert("Good! Your Record: " + sec + " sec");
         clearInterval(x);
+        check.innerHTML = "Thanks for playing";
     }
 };
 
@@ -135,7 +136,8 @@ game.shuffle = function () {
         game.swap();
     }
 
-    var n = Math.floor(Math.random() * (game.answer.length - 1));
+    var rmax = Math.max(game.answer.length - 2, 1);
+    var n = Math.floor(Math.random() * rmax) + 1;
     for (var i = 0; i < n; i++) {
         game.rshift();
     }
