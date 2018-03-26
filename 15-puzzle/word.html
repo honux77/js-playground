@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>단어 움직이기 퍼즐</title>
+    <style>
+        button{
+            font-size: 20px;
+            margin: 5px;
+        }
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>단어 움직이기 퍼즐</h1>
+    <div>
+        <p id='progress'></p>
+        <p id="word1"></p>
+        <div id="word2"></div>
+        <div id="btns">
+            <button onclick="swap()">뒤집기</button>
+            <button onclick="rshift()"> 오른쪽 밀어내기</button>
+            <button onclick="lshift()"> 왼쪽 밀어내기</button>
+
+        </div>
+        <p id="check">일치합니다.</p>
+        <p id="time">0</p>
+    </div>
+    
+    <script src="word.js"></script>
+</body>
+</html>
