@@ -24,12 +24,12 @@
         };
 
         numbers.addAllNumber = function(max_num) {
-            for (var i = 2; i < max_num; i++) {
+            for (var i = 2; i <= max_num; i++) {
                    this.all.push(i);
             }
         };
 
-        numbers.addPrime = function(number) {
+        numbers.calcPrimes = function() {
             for (var i = 0; i < this.all.length; i++) {
                 var n = this.all[i];
                 if (this.isPrime(n)) {
@@ -48,7 +48,7 @@
         };
 
         numbers.addAllNumber(10000);
-        numbers.addPrime();
+        numbers.calcPrimes();
         document.getElementById('result').innerHTML = numbers.getAllPrimeNumbers();
         
     </script>
